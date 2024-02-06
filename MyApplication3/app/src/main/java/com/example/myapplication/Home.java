@@ -13,8 +13,10 @@ public class
 Home extends AppCompatActivity {
 
     private Button btnContact;
+    private Button btnEmployee;
 
     @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +33,22 @@ Home extends AppCompatActivity {
 
             }
         });
+
+        btnEmployee = findViewById(R.id.btnEmployee);
+        btnEmployee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), Employee.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
+
+
+
+
+
+
 }
